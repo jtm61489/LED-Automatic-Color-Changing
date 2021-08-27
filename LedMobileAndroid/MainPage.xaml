@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:colorpicker="clr-namespace:ColorPicker;assembly=ColorPicker"
+             xmlns:forms="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             mc:Ignorable="d"
+             Title="Safe Area"
+             x:Class="LedMobileAndroid.MainPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />    
+                </Grid.RowDefinitions>
+                <Label Text="Lights On/Off"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="End" />
+                <Switch x:Name="SwitchOnOff" Grid.Column="1" IsToggled="false" 
+                     VerticalOptions="CenterAndExpand" 
+                     HorizontalOptions="Start" 
+                     />
+            </Grid>
+            <Grid>
+                <Label Text="Auto On/Off"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="End" />
+                <Switch x:Name="SwitchAuto" Grid.Column="1" IsToggled="false" 
+                     VerticalOptions="CenterAndExpand" 
+                     HorizontalOptions="Start" 
+                     />
+
+            </Grid>
+            <Grid>
+                <Button x:Name="ButtonChangeColor" Text="Change Color" BackgroundColor="{Binding Source={x:Reference ColorWheel1}, Path=SelectedColor}" Margin="10" />
+            </Grid>
+            <Grid>
+                <colorpicker:ColorWheel x:Name="ColorWheel1"
+                                ShowAlphaSlider="False"
+                                ShowLuminositySlider="False"
+                                ShowLuminosityWheel="False"
+                                IsVisible="True"
+                                Vertical="False"
+                                Padding="5"
+                                />
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

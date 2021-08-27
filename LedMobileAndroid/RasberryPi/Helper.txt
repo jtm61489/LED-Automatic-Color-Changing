@@ -1,0 +1,5 @@
+ls /dev/input
+sudo thonny
+sudo pip3 install blah
+sudo lxtask
+sudo python3 /home/pi/Desktop/LED_Testing/LED_Testing.py

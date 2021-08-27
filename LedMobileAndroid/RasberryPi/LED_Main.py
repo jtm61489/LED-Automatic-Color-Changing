@@ -73,7 +73,7 @@ pingTime = 40
 
 def StartUp():
     conn = mariadb.connect(host='127.0.0.1', port=3306,
-                                       user='LedUser', password='JTM665650', database='LED')
+                                       user='LedUser', password='XXXXXXXXXX', database='LED')
         
     cur = conn.cursor()
     cur.execute("SELECT LightsOn, UseAppControl FROM LED_Main")
@@ -362,7 +362,7 @@ async def PingPlaystation():
 async def DataBaseChecks():
     while not endScript:
         conn = await aiomysql.connect(host='127.0.0.1', port=3306,
-                                       user='LedUser', password='JTM665650', db='LED',
+                                       user='LedUser', password='XXXXXXXXXX', db='LED',
                                        loop=loop)
 
         cur = await conn.cursor()
@@ -398,7 +398,7 @@ async def DataBaseChecks():
 def UpdateLedMain(lightsOn, componentInControl, red, green, blue, controllerColor):
 
         conn = mariadb.connect(host='127.0.0.1', port=3306,
-                                   user='LedUser', password='JTM665650', database='LED')
+                                   user='LedUser', password='XXXXXXXXXX', database='LED')
     
         cur = conn.cursor()
         cur.execute("""UPDATE LED_Main

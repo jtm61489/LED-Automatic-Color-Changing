@@ -15,7 +15,7 @@ namespace LedMobileAndroid
         {
             mySqlConnection = new MySqlConnection
             {
-                ConnectionString = "server=192.168.1.87;port=3306;userid=LedExternal;password=JTM665650;database=LED;Pooling=false"                
+                ConnectionString = "server=192.168.1.87;port=3306;userid=LedExternal;password=XXXXXXXXXX;database=LED;Pooling=false"                
             };
             
         }
